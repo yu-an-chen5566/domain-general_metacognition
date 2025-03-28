@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabor</title>
+  <script src="https://unpkg.com/jspsych@7.3.4"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.3"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-fullscreen@1.2.1"></script>
+  <script src="/jspsych-psychophysics-master/jspsych-psychophysics.js"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-instructions@1.1.4"></script>
+  <script src="Gabor.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/jspsych@7.3.4/css/jspsych.css">
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: gray;
+    }
+
+    /* Make the jsPsych container the positioning context */
+    #jspsych-target {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-color: gray;
+    }
+
+    /* Basic styling for jsPsych content */
+    .jspsych-content {
+      width: 100%;
+      max-width: none;
+    }
+
+    /* Center the fullscreen message */
+    .jspsych-fullscreen-message {
+      text-align: center;
+    }
+
+    /* Ensure canvas is centered */
+    canvas {
+      display: block;
+      margin: 0 auto;
+      background-color: gray;
+    }
+
+    /* Style the experimental container */
+    .experiment-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: gray;
+    }
+
+    /* Frame positioning */
+    .square-frame {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 2px solid black;
+      background-color: gray;
+    }
+
+
+    /* Buttons styling */
+    .jspsych-btn {
+      margin: 0 10px;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #f8f8f8;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .jspsych-btn:hover {
+      background-color: #e8e8e8;
+    }
+
+    /* Override jsPsych defaults */
+    .jspsych-display-element {
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="jspsych-target"></div>
+</body>
+
+</html>
